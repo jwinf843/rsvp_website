@@ -15,7 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from rsvp import views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('map/', views.map),
+    # Always leave the index url at the bottom
+    path('', views.index),
 ]
