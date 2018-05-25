@@ -20,7 +20,8 @@ from rsvp import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('map/', views.map),
+    path('guests/', views.guests),
+    path('nav/', views.nav),
     # Always leave the index url at the bottom
     path('', views.index),
 ]

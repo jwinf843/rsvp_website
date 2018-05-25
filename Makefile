@@ -30,3 +30,4 @@ makemigrations:
 createsuperuser:
 	@echo $(TAG)Create Superuser$(END)
 	$(call django-command, createsuperuser)
+	# admin/admin
