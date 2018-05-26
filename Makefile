@@ -7,7 +7,7 @@ HOST=0.0.0.0
 PORT=8080
 PROJECT_NAME=website
 PYTHONPATH=$(PROJECT_NAME)
-DJANGO_SETTINGS=$(PROJECT_NAME).settings
+DJANGO_SETTINGS=$(PROJECT_NAME).settings.base
 
 django-command = django-admin $(1) $(2) --settings $(DJANGO_SETTINGS) --pythonpath $(PYTHONPATH)
 
@@ -19,13 +19,13 @@ shell:
 	@echo $(TAG)Running Shell $(END)
 	$(call django-command, shell)
 
-migrate:
-	@echo $(TAG)Migrating Database$(END)
-	$(call django-command, migrate)
-
 makemigrations:
 	@echo $(TAG)Creating Migrations$(END)
 	$(call django-command, makemigrations)
+
+migrate:
+	@echo $(TAG)Migrating Database$(END)
+	$(call django-command, migrate)
 
 createsuperuser:
 	@echo $(TAG)Create Superuser$(END)
