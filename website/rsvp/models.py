@@ -5,10 +5,10 @@ from django.db import models
 class Guest(models.Model):
     name = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
-    rsvp = models.BooleanField
+    rsvp = models.BooleanField(default=False)
     additions = models.IntegerField(null=True, blank=True)
     message = models.CharField(max_length=1020)
-    # created = models.DateTimeField
+    created = models.DateTimeField(auto_now_add=True)
     
     def __str__(self):
         return self.name

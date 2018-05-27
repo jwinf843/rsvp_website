@@ -9,6 +9,10 @@ def index(request):
         'guest': guest
     })
     
+def process(request):
+    
+    pass
+    
 def jp(request):
     
     return render(request, 'index_jp.html')
@@ -22,9 +26,9 @@ def nav_jp(request):
     return render(request, 'nav_jp.html')
     
 def guests(request):
-    
-    return render(request, 'guests.html', {'people' : [1, 2, 3]})
+    guests = Guest.objects.all()
+    return render(request, 'guests.html', {'people' : guests})
     
 def guests_jp(request):
-    
-    return render(request, 'guests_jp.html', {'people': [1, 2, 3]})
+    guests = Guest.objects.all()
+    return render(request, 'guests_jp.html', {'people' : guests})
