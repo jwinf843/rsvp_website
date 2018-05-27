@@ -8,7 +8,7 @@ class Guest(models.Model):
     rsvp = models.BooleanField
     additions = models.IntegerField(null=True, blank=True)
     message = models.CharField(max_length=1020)
-    created = models.DateTimeField
+    # created = models.DateTimeField
     
     def __str__(self):
         return self.name
