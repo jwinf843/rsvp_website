@@ -12,14 +12,8 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Jordan & Naoko</title>
-    <style>
-          .imageBox {
-            border: 0px solid black;
-            
-            background-image: url("https://i.imgur.com/5Rr9BnH.png");
-          }
-    </style>
-
+   
+    
     <!-- Bootstrap core CSS -->
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
 
@@ -30,7 +24,7 @@
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="#">Navbar</a>
+      <a class="navbar-brand" href="/">English</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -38,30 +32,30 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/jp/">ホーム<span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="/nav_jp/">地図</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
+            <a class="nav-link disabled" href="/guests_jp/">ゲストリスト</a>
           </li>
-          <li class="nav-item dropdown">
+          <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
               <a class="dropdown-item" href="#">Action</a>
               <a class="dropdown-item" href="#">Another action</a>
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
-          </li>
+          </li> -->
         </ul>
-        <h3 style="font-size:20px;color:green;">Contact Us</h3><h3 style="font-size:20px;color:#273746;"> | </h3>
+        <h3 style="font-size:20px;color:green;">連絡</h3><h3 style="font-size:20px;color:#273746;"> | </h3>
 
         <form class="form-inline my-2 my-lg-0">
           <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
           <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-          <a href="mailto:jwinf843@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Jordan's Email</a>
-          <a href="mailto:cosmos.naochan@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Naoko's Email</a>
+          <a href="mailto:jwinf843@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">冗談のメール</a>
+          <a href="mailto:cosmos.naochan@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">直子のメール</a>
         </form>
       </div>
     </nav>
@@ -73,9 +67,51 @@
         <div class="container">
           <title>Example</title>
           
-          <h1 class="display-3">Join us for a Wedding BBQ!</h1>
+          <!-- Title at top of Page -->
+          <div align="center">
+          <h1 class="display-3">結婚BBQしよう!</h1>
+          </div>
+          
+          <!-- Slide Carousel goes here -->
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+            </ol>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img class="d-block w-100" src="https://i.imgur.com/6rWyYsH.jpg" alt="First slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/C17ags2.jpg" alt="Second slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/xrw6pCD.jpg" alt="Third slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/MVZFDPy.jpg" alt="Fourth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/KmFVfNJ.jpg" alt="Fifth slide">
+              </div>
+              <div class="carousel-item">
+                <img class="d-block w-100" src="https://i.imgur.com/GPbPkva.jpg" alt="Sixth slide">
+              </div>
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+          <!-- Text under Carousel -->
+          <div align="center">
           <p>Jordan Winfery and Naoko Takata have invited you to join them to celebrate their marriage!</p>
-          <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
+          </div>
         </div>
       </div>
 
@@ -92,12 +128,12 @@
           <div class="col-md-4">
             <h2>Where?</h2>
             <p>服部緑地公園 (Hattori Ryokuchi Park) is a large, hilly park in northern Osaka. We've rented a covered BBQ space in the middle of the park for everyone to enjoy!</p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="/nav/" role="button">View details &raquo;</a></p>
           </div>
           <div class="col-md-4">
             <h2>Who's Coming?</h2>
             <p>We're inviting all our closest friends to join us for a beautiful summer day! </p>
-            <p><a class="btn btn-secondary" href="#" role="button">View details &raquo;</a></p>
+            <p><a class="btn btn-secondary" href="/guests/" role="button">View details &raquo;</a></p>
           </div>
         </div>
 
@@ -106,9 +142,58 @@
       </div> <!-- /container -->
 
     </main>
+    
+    <!-- RSVP FORM -->
 
     <footer class="container">
-      We're looking forward to seeing you there!
+      <section id="RSVP" class="">
+          <div class="container">
+              <div class="row">
+                  <div class="col col text-center">
+                      <h1>予約</h1>
+                      <hr class="primary">
+                      
+                      <!-- Build out the Form -->
+                      <form class='' action='/process/' method='post'>
+                        {% csrf_token %}
+                      <div class="form-group">
+                        <input type='text' name='name' placeholder='名前' class="form-control" required>
+                      </div>
+                      <div class="form-group">
+                        <input type='text' name='email' placeholder='電子メール' class="form-control" required>
+                      </div>
+                      
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rsvp" id="inlineRadio1" value="True" required>
+                        <label class="form-check-label" for="inlineRadio1">出席</label>
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="rsvp" id="inlineRadio2" value="False">
+                        <label class="form-check-label" for="inlineRadio2">来ない</label>
+                      </div>
+                      <p> </p>                
+                      <p>何人と来る？</p>
+                      {% for i in "0123"%}
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="additions" id="inlineRadio{{i}}" value="{{i}}">
+                        <label class="form-check-label" for="inlineRadio{{i}}">{{i}}</label>
+                      </div>
+                      {% endfor %}
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="additions" id="inlineRadio4plus" value="4">
+                        <label class="form-check-label" for="inlineRadio4plus">4+</label>
+                      </div>
+                     
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">直子と冗談へのメッセージ:</label>
+                        <textarea class="form-control" name='message' id="exampleFormControlTextarea1" rows="5"></textarea>
+                      </div>
+                        <button type="submit" class="btn btn-success">RSVP</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </section>
     </footer>
 
     <!-- Bootstrap core JavaScript
@@ -121,22 +206,5 @@
   </body>
 </html>
 
-<!-- RSVP FORM -->
 
-<section id="RSVP" class="bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h2>RSVP Here!</h2>
-                <!-- <h3>連絡先はこちら!</h3> -->
-                <hr class="primary">
-                <!-- <p>If you have any questions don't hesitate to reach out!</p> -->
-            </div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
-                <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                <!-- <p><a href="mailto:jwinf843@gmail.com">Jordan's Email</a></p> -->
-                <!-- <p><a href="mailto:cosmos.naochan@gmail.com">Naoko's Email</a></p> -->
-            </div>
-        </div>
-    </div>
-</section>
+
