@@ -5,9 +5,22 @@ from rsvp.models import Guest
 # Create your views here.
 def index(request):
     guest = Guest.objects.all()
-    return render(request, 'index.html', {
+    
+    if request.method == 'GET':
+        return render(request, 'index.html', {
         'guest': guest
     })
+    
+    #Post Request Data
+    guest = Guest(
+        name=request.POST['name'], 
+        email=request.POST['email'], 
+        rsvp=request.POST['rsvp'],
+        additions=request.POST['additions'],
+        message=request.POST['message'],
+        )
+    
+    return render(request, 'rsvp.html')
     
 def process(request):
     

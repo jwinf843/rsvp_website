@@ -73,11 +73,7 @@
         <div class="container">
           <title>Example</title>
           
-          <!-- Title at top of Page -->
-          <div align="center">
-          <h1 class="display-3">Join us for a Wedding BBQ!</h1>
-          </div>
-          
+          <h1 class="display-3">Thank you for your RSVP!</h1>
           <!-- Slide Carousel goes here -->
           <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -96,13 +92,13 @@
                 <img class="d-block w-100" src="https://i.imgur.com/xrw6pCD.jpg" alt="Third slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/MVZFDPy.jpg" alt="Fourth slide">
+                <img class="d-block w-100" src="https://i.imgur.com/GPbPkva.jpg" alt="Fourth slide">
               </div>
               <div class="carousel-item">
                 <img class="d-block w-100" src="https://i.imgur.com/KmFVfNJ.jpg" alt="Fifth slide">
               </div>
               <div class="carousel-item">
-                <img class="d-block w-100" src="https://i.imgur.com/GPbPkva.jpg" alt="Sixth slide">
+                <img class="d-block w-100" src="https://i.imgur.com/MVZFDPy.jpg" alt="Sixth slide">
               </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -115,9 +111,7 @@
             </a>
           </div>
           <!-- Text under Carousel -->
-          <div align="center">
           <p>Jordan Winfery and Naoko Takata have invited you to join them to celebrate their marriage!</p>
-          </div>
           <!-- <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more &raquo;</a></p> -->
         </div>
       </div>
@@ -151,9 +145,7 @@
     </main>
 
     <footer class="container">
-      <div align="center">
-        We're looking forward to seeing you there!
-      </div>
+      We're looking forward to seeing you there!
     </footer>
 
     <!-- Bootstrap core JavaScript
@@ -165,57 +157,3 @@
     <script src="{% static "js/bootstrap.min.js" %}"></script>
   </body>
 </html>
-
-<!-- RSVP FORM -->
-
-<section id="RSVP" class="bg-dark">
-    <div class="container">
-        <div class="row">
-            <div class="col col text-center">
-                <h2>RSVP Here!</h2>
-                <hr class="primary">
-                
-                <!-- Build out the Form -->
-                
-                <input type='text' name='name' placeholder='Name'><br>
-                <input type='text' name='email' placeholder='E-Mail'><br>
-                <p></p>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">I'll be there!</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">I won't be able to make it</label>
-                </div>
-                <p> </p>                
-                <p>Number of people you'll be bringing</p>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">0</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">1</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                  <label class="form-check-label" for="inlineRadio1">2</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">3</label>
-                </div>
-                <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                  <label class="form-check-label" for="inlineRadio2">4+</label>
-                </div>
-                <div class="form-group">
-                  <label for="exampleFormControlTextarea1">My message for Naoko & Jordan:</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                </div>
-                <button type="button" class="btn btn-success">RSVP</button>
-            </div>
-        </div>
-    </div>
-</section>
