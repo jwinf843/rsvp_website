@@ -30,9 +30,24 @@ def process(request):
         if field not in request.POST:
             return HttpResponse('Error missing field.')
 
+    #Post Request Data
+    rsvp_val=True
+    if request.POST['rsvp'] == 'True':
+            rsvp_val=True
+    elif request.POST['rsvp'] == 'False':
+            rsvp_val=False
     
-    rsvp = request.POST['rsvp']
-    return HttpResponse(str(request.POST))
+    guest = Guest(
+        name=request.POST['name'], 
+        email=request.POST['email'], 
+        rsvp=rsvp_val,
+        additions=request.POST['additions'],
+        message=request.POST['message'],
+        )
+        
+    guest.save()
+    print("ID %s:" % guest.id)
+    return render(request, 'process.html')
     
 def jp(request):
     

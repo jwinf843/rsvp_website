@@ -12,7 +12,13 @@
     <link rel="icon" href="../../../../favicon.ico">
 
     <title>Jordan & Naoko</title>
-   
+    <!-- Ugly unformated picture as a background <style>
+          .imageBox {
+            border: 0px solid black;
+            
+            background-image: url("https://i.imgur.com/5Rr9BnH.png");
+          }
+    </style> -->
     
     <!-- Bootstrap core CSS -->
     <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
@@ -69,7 +75,7 @@
           
           <!-- Title at top of Page -->
           <div align="center">
-          <h1 class="display-3">Join us for a Wedding BBQ!</h1>
+          <h1 class="display-3">Thank you for registering!</h1>
           </div>
           
           <!-- Slide Carousel goes here -->
@@ -142,59 +148,10 @@
       </div> <!-- /container -->
 
     </main>
-    
-    <!-- RSVP FORM -->
 
-    <footer class="container">
-      <section id="RSVP" class="">
-          <div class="container">
-              <div class="row">
-                  <div class="col col text-center">
-                      <h1>RSVP Here!</h1>
-                      <hr class="primary">
-                      
-                      <!-- Build out the Form -->
-                      <form class='' action='/process/' method='post'>
-                        {% csrf_token %}
-                      <div class="form-group">
-                        <input type='text' name='name' placeholder='Name' class="form-control" required>
-                      </div>
-                      <div class="form-group">
-                        <input type='text' name='email' placeholder='E-Mail' class="form-control" required>
-                      </div>
-                      
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rsvp" id="inlineRadio1" value="True" required>
-                        <label class="form-check-label" for="inlineRadio1">I'll be there!</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="rsvp" id="inlineRadio2" value="False">
-                        <label class="form-check-label" for="inlineRadio2">I won't be able to make it</label>
-                      </div>
-                      <p> </p>                
-                      <p>Number of people you'll be bringing</p>
-                      {% for i in "0123"%}
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="additions" id="inlineRadio{{i}}" value="{{i}}">
-                        <label class="form-check-label" for="inlineRadio{{i}}">{{i}}</label>
-                      </div>
-                      {% endfor %}
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="additions" id="inlineRadio4plus" value="4">
-                        <label class="form-check-label" for="inlineRadio4plus">4+</label>
-                      </div>
-                     
-                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1">My message for Naoko & Jordan:</label>
-                        <textarea class="form-control" name='message' id="exampleFormControlTextarea1" rows="5"></textarea>
-                      </div>
-                        <button type="submit" class="btn btn-success">RSVP</button>
-                      </form>
-                  </div>
-              </div>
-          </div>
-      </section>
-    </footer>
+
+
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
@@ -205,6 +162,3 @@
     <script src="{% static "js/bootstrap.min.js" %}"></script>
   </body>
 </html>
-
-
-
