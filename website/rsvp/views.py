@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from django.http import HttpResponse
 from rsvp.models import Guest
 
 # Create your views here.
@@ -22,9 +22,17 @@ def index(request):
     
     return render(request, 'rsvp.html')
     
+
 def process(request):
+    required_fields = ['rsvp', 'name', 'email']
+    print(request.POST)
+    for field in required_fields:
+        if field not in request.POST:
+            return HttpResponse('Error missing field.')
+
     
-    pass
+    rsvp = request.POST['rsvp']
+    return HttpResponse(str(request.POST))
     
 def jp(request):
     

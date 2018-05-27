@@ -25,6 +25,7 @@ urlpatterns = [
     path('nav/', views.nav),
     path('nav_jp/', views.nav_jp),
     path('jp/', views.jp),
+    path('process/', views.process),
     # Always leave the index url at the bottom
     path('', views.index),
 ]
