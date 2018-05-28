@@ -84,18 +84,24 @@
     
     <div class="container">
         <!-- Example row of columns -->
-        
-        {% for guest in Guest.objects.all() %}
-        <div class="row">
-          <div class="col-md-4">
-            <h2>guest.name</h2>
-            <p>guest.message</p>
-         </div>
-        </div>
 
       </div> <!-- /container -->
 
     </main>
+    
+<div>
+    {% for person in guest_list %}
+        <!-- <div class="row">
+          <div class="col-md-4">
+            <h2>{{ guest.name }}</h2>
+            <p>{{ guest.message }}</p>
+         </div>
+        </div> -->
+        
+        <p> {{ person }} </p>
+    
+    {% endfor %}
+</div>
     
 
     <!-- Bootstrap core JavaScript
