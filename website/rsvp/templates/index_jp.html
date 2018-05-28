@@ -122,7 +122,7 @@
             <h2>いつ?</h2>
             <p>7月15日　日曜日</p>
             <p>11:00 - 14:00</p>
-            <p>入退場自由ですので気軽にお越しください！11時30分ごろにBBQの準備が整います。13時には記念撮影を行います。</p>
+            <p>入退場自由ですのでお気軽にお越しください！11時30分ごろにBBQの準備が整います。13時には記念撮影を行います。</p>
             
           </div>
           <div class="col-md-4">
@@ -170,10 +170,10 @@
                       </div>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="rsvp" id="inlineRadio2" value="False">
-                        <label class="form-check-label" for="inlineRadio2">来ない</label>
+                        <label class="form-check-label" for="inlineRadio2">欠席</label>
                       </div>
                       <p> </p>                
-                      <p>何人と来る？</p>
+                      <p>同伴者の人数</p>
                       {% for i in "0123"%}
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="additions" id="inlineRadio{{i}}" value="{{i}}">
@@ -186,7 +186,7 @@
                       </div>
                      
                       <div class="form-group">
-                        <label for="exampleFormControlTextarea1">直子と冗談へのメッセージ:</label>
+                        <label for="exampleFormControlTextarea1">直子とジョーダンへのメッセージ:</label>
                         <textarea class="form-control" name='message' id="exampleFormControlTextarea1" rows="5"></textarea>
                       </div>
                         <button type="submit" class="btn btn-success">確定</button>
