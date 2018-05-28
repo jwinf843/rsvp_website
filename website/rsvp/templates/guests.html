@@ -89,20 +89,16 @@
 
     </main>
     
-<div>
-    {% for person in guest_list %}
-        <!-- <div class="row">
-          <div class="col-md-4">
-            <h2>{{ guest.name }}</h2>
-            <p>{{ guest.message }}</p>
-         </div>
-        </div> -->
-        
-        <p> {{ person }} </p>
-    
-    {% endfor %}
+<!-- Guest Book Builder Loop -->
+
+{% for person in people %}
+<div class="jumbotron justify-content-md-center">
+    <div class="container justify-content-md-center">
+        <h1 class="display-4"> {{ person }} </h1>
+        <p class="lead"> {{ person.message }} </p>
+    </div>
 </div>
-    
+{% endfor %}
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

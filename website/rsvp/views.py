@@ -62,7 +62,7 @@ def nav_jp(request):
     return render(request, 'nav_jp.html')
     
 def guests(request):
-    guest_list = Guest.objects.all()
+    guests = Guest.objects.all()
     return render(request, 'guests.html', {'people' : guests})
     
 def guests_jp(request):
