@@ -29,3 +29,4 @@ urlpatterns = [
     # Always leave the index url at the bottom
     path('', views.index),
 ]
+
