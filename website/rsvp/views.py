@@ -68,3 +68,11 @@ def guests(request):
 def guests_jp(request):
     guests = Guest.objects.all()
     return render(request, 'guests_jp.html', {'people' : guests})
+    
+def album(request):
+    
+    return render(request, 'album.html')
+    
+def album_jp(request):
+    
+    return render(request, 'album_jp.html')
