@@ -78,9 +78,10 @@ def album(request):
         for line in fp:
             line = line.strip()  # Remove whitespace
             if line:
-                photo_urls.append(line)
+                photo_pair = (line + 'm.jpg', line + '.jpg')
+                photo_urls.append(photo_pair)
 
-    return render(request, 'album.1.html', {
+    return render(request, 'album.html', {
     'photo_urls': photo_urls
     })
     
