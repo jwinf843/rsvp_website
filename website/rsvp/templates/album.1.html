@@ -1,0 +1,104 @@
+{% load static %}
+
+<!–– This is what comments look like ––>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Jordan & Naoko</title>
+   
+    
+    <!-- Bootstrap core CSS -->
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static "css/jumbotron.css" %}" rel="stylesheet">
+  
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+      <a class="navbar-brand" href="/jp/">日本語</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/album/">Album <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/nav/">Directions</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="/guests/">Guest List</a>
+          </li>
+          <!-- <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+            <div class="dropdown-menu" aria-labelledby="dropdown01">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </li> -->
+        </ul>
+        <p class="btn btn-outline-success my-2 my-sm-0">Contact</p>
+
+        <form class="form-inline my-2 my-lg-0">
+          <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
+          <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
+          <a href="mailto:jwinf843@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Jordan's Email</a>
+          <a href="mailto:cosmos.naochan@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Naoko's Email</a>
+        </form>
+      </div>
+    </nav>
+
+<!-- Photo Gallery -->
+    
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">Photo Album!</h1>
+          <p class="lead text-muted">Thank each and every one of you for such a magical day!</p>
+        </div>
+      </section>
+      
+      <!--1-->
+      <div class="album py-5 bg-dark">
+        <div class="container">
+
+          <div class="row">
+          
+          {% for photo in photo_urls %}
+            <div class="col-md-4">
+               <div class="card mb-4 box-shadow">
+                 <a target="_blank" href= "{{ photo }}">
+                   <img class="card-img-top" data-src="{{ photo }}" src="{{ photo }}" alt="Card image cap">
+                 </a>
+                 <div class="card-body">
+                   <p class="card-text">{{ forloop.counter }}</p>
+                   <div class="d-flex justify-content-between align-items-center">
+                    
+                   </div>
+                 </div>
+               </div>
+             </div>
+          {% endfor %}
+          
+          </div>
+        </div>
+      </div>
+
+    </main>

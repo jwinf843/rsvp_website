@@ -1,6 +1,8 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from rsvp.models import Guest
+from django.conf import settings
+import os
 
 # Create your views here.
 def index(request):
@@ -70,8 +72,17 @@ def guests_jp(request):
     return render(request, 'guests_jp.html', {'people' : guests})
     
 def album(request):
-    
-    return render(request, 'album.html')
+    photo_urls = []
+    photo_file_path = os.path.join(settings.PROJECT_DIR, 'photos.txt')
+    with open(photo_file_path) as fp:
+        for line in fp:
+            line = line.strip()  # Remove whitespace
+            if line:
+                photo_urls.append(line)
+
+    return render(request, 'album.1.html', {
+    'photo_urls': photo_urls
+    })
     
 def album_jp(request):
     
