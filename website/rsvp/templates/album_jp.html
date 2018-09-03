@@ -19,12 +19,13 @@
 
     <!-- Custom styles for this template -->
     <link href="{% static "css/jumbotron.css" %}" rel="stylesheet">
+  
   </head>
 
   <body>
 
     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-      <a class="navbar-brand" href="/">English</a>
+      <a class="navbar-brand" href="/jp/">日本語</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -32,16 +33,16 @@
       <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="/jp/">ホーム<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="/album_jp/">アルバム<span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="/album/">Album <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/nav_jp/">アクセス</a>
+            <a class="nav-link" href="/nav/">Directions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled" href="/guests_jp/">ゲストリスト</a>
+            <a class="nav-link disabled" href="/guests/">Guest List</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
@@ -52,15 +53,52 @@
             </div>
           </li> -->
         </ul>
-        <h3 style="font-size:20px;color:green;">連絡先</h3><h3 style="font-size:20px;color:#273746;"> | </h3>
+        <p class="btn btn-outline-success my-2 my-sm-0">Contact</p>
 
         <form class="form-inline my-2 my-lg-0">
           <!-- <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search"> -->
           <!-- <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button> -->
-          <a href="mailto:jwinf843@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">冗談のメール</a>
-          <a href="mailto:cosmos.naochan@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">直子のメール</a>
+          <a href="mailto:jwinf843@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Jordan's Email</a>
+          <a href="mailto:cosmos.naochan@gmail.com" class="btn btn-outline-success my-2 my-sm-0" role="button">Naoko's Email</a>
         </form>
       </div>
     </nav>
 
+<!-- Photo Gallery -->
+    
     <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading">写真アルバム!</h1>
+          <p class="lead text-muted">皆さん、ありがとうございます!</p>
+        </div>
+      </section>
+      
+      <!--1-->
+      <div class="album py-5 bg-dark">
+        <div class="container">
+
+          <div class="row">
+          
+          {% for photo in photo_urls %}
+            <div class="col-md-4">
+               <div class="card mb-4 box-shadow">
+                 <a target="_blank" href= "{{ photo.1 }}">
+                   <img class="card-img-top" data-src="{{ photo.0 }}" src="{{ photo.1 }}" alt=" {{ forloop.counter }}">
+                 </a>
+                 <div class="card-body">
+                   <p class="card-text">{{ forloop.counter }}</p>
+                   <div class="d-flex justify-content-between align-items-center">
+                    
+                   </div>
+                 </div>
+               </div>
+             </div>
+          {% endfor %}
+          
+          </div>
+        </div>
+      </div>
+
+    </main>
